@@ -44,11 +44,27 @@ nav {
  transition: opacity 0.3s ease, visibility 0.3s ease;
  z-index: 1;
 
+ @media (min-width: 1024px) {
+  position: initial;
+  visibility: initial;
+  opacity: initial;
+  transform: initial;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+ }
  ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (min-width: 768px) {
+   flex-direction: row;
+   justify-content: flex-start;
+   gap: 3rem;
+   flex: 2;
+   padding-left: 3rem;
+  }
  }
  hr {
   width: 90%;
@@ -62,14 +78,45 @@ nav {
   width: 100%;
   padding: 1rem 0;
   text-align: center;
+  @media (min-width: 768px) {
+   width: auto;
+  }
  }
  a {
   color: white;
+  @media (min-width: 600px) {
+   color: black;
+  }
  }
- ul:nth-child(3) li:last-child a {
+}
+.nav-button {
+ display: flex;
+ flex-direction: column;
+ justify-content: end;
+ align-items: center;
+ gap: 1rem;
+ flex: 1;
+ padding: 1rem;
+ button {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
   background-color: hsl(180, 66%, 49%);
   border-radius: 25px;
-  padding: 10px 7rem;
+  padding: 10px 90px;
+  border: none;
+  @media (min-width: 600px) {
+   padding: 0;
+   flex: 50%;
+  }
+ }
+ @media (min-width: 768px) {
+  flex-direction: row;
+  padding: 0;
+  button {
+   padding: 13px 25px;
+   flex: 0 1 auto;
+  }
  }
 }
 .nav-menu::before {
@@ -98,6 +145,9 @@ nav {
  align-items: center;
  text-align: center;
  max-width: 100%;
+ @media (min-width: 1024px) {
+  flex-direction: row-reverse;
+ }
 }
 .hero-image {
  overflow: hidden;
@@ -126,6 +176,63 @@ nav {
   font-size: 18px;
   background-color: hsl(180, 66%, 49%);
  }
+ @media (min-width: 1024px) {
+  text-align: start;
+  max-width: 45ch;
+
+  h1 {
+   font-size: 3.5rem;
+  }
+
+  p {
+   line-height: 1.5;
+  }
+  button {
+   flex: 0 1 auto;
+   align-self: flex-start;
+   margin: 1rem 0;
+   padding: 15px 50px;
+  }
+ }
+}
+
+// URL SHRINK
+
+.url-shrink {
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ border-radius: 5px;
+ padding: 1.5rem;
+ margin: 1rem;
+ background: url(../images/bg-shorten-mobile.svg) no-repeat;
+ background-color: hsl(257, 27%, 26%);
+ background-position: top right;
+ position: relative;
+ top: 5rem;
+ @media (min-width: 1024px) {
+  flex-direction: row;
+  padding: 3rem;
+  input {
+   flex: 1;
+  }
+ }
+
+ input {
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+ }
+ button {
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px;
+  background-color: hsl(180, 66%, 49%);
+ }
 }
 
 // STAT SECTION
@@ -134,6 +241,7 @@ nav {
  display: flex;
  flex-direction: column;
  background-color: rgb(241, 241, 241);
+ padding-top: 8rem;
 }
 .stat-head {
  text-align: center;
@@ -159,6 +267,9 @@ nav {
   width: 7px;
   background-color: hsl(180, 66%, 49%);
   transform: translateX(-50%);
+ }
+ @media (min-width: 1024px) {
+  flex-direction: row;
  }
 }
 .stat-card {
@@ -190,36 +301,6 @@ nav {
  }
 }
 
-// URL SHRINK
-
-.url-shrink {
- display: flex;
- flex-direction: column;
- gap: 1rem;
- border-radius: 5px;
- padding: 1.5rem;
- margin: 1rem;
- background: url(../images/bg-shorten-mobile.svg) no-repeat;
- background-color: hsl(257, 27%, 26%);
- background-position: top right;
-
- input {
-  padding: 1rem;
-  border-radius: 5px;
-  border: none;
-  font-size: 18px;
- }
- button {
-  border-radius: 5px;
-  border: none;
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 15px;
-  background-color: hsl(180, 66%, 49%);
- }
-}
-
 // BANNER
 
 .banner {
@@ -227,6 +308,9 @@ nav {
  background-color: hsl(257, 27%, 26%);
  h2 {
   color: white;
+  @media (min-width: 768px) {
+   font-size: 2rem;
+  }
  }
  button {
   background-color: hsl(180, 66%, 49%);
@@ -237,6 +321,11 @@ nav {
   font-size: 18px;
   font-weight: 700;
   margin: 1rem 5rem;
+
+  @media (min-width: 768px) {
+   width: 15%;
+   align-self: center;
+  }
  }
 }
 .boost {
@@ -248,6 +337,7 @@ nav {
  left: 50%;
  transform: translate(-50%, -50%);
  top: 50%;
+ gap: 0.5rem;
 }
 
 // FOOTER SECTION
@@ -261,6 +351,10 @@ footer {
  gap: 1.5rem;
  padding: 3rem 0;
  background-color: hsl(260, 8%, 14%);
+ @media (min-width: 1024px) {
+  flex-direction: row;
+  justify-content: space-around;
+ }
 
  ul {
   margin: 0;
