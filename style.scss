@@ -37,6 +37,7 @@ nav {
  opacity: 0;
  transform: translateX(-50%);
  transition: opacity 0.3s ease, visibility 0.3s ease;
+ z-index: 1;
 
  ul {
   display: flex;
@@ -130,9 +131,26 @@ footer {
  justify-content: center;
  align-items: center;
  text-align: center;
+ gap: 1.5rem;
+ padding: 3rem 0;
+ background-color: hsl(260, 8%, 14%);
 
  ul {
   margin: 0;
   padding: 0;
  }
+ li:first-child {
+  font-weight: 700;
+  color: white;
+ }
+ li {
+  padding: 0.5rem;
+ }
+ a {
+  color: hsl(0, 0%, 75%);
+ }
+}
+.social {
+ display: flex;
+ gap: 1.5rem;
 }
