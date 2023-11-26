@@ -131,6 +131,33 @@ nav ul:nth-child(3) li:last-child a {
   background-color: hsl(180, 66%, 49%);
 }
 
+.banner {
+  position: relative;
+  color: white;
+  background-color: hsl(257, 27%, 26%);
+}
+.banner button {
+  background-color: hsl(180, 66%, 49%);
+  border: none;
+  color: white;
+  padding: 15px 0;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 1rem 5rem;
+}
+
+.boost {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+
 footer {
   display: flex;
   flex-direction: column;
