@@ -1,5 +1,6 @@
 body {
  font-family: "Poppins", sans-serif;
+ max-width: 1440px;
 }
 p {
  font-size: 18px;
@@ -11,21 +12,26 @@ a {
 li {
  list-style-type: none;
 }
+img {
+ display: block;
+ max-width: 100%;
+ height: auto;
+}
 
 // HEADER SECTION
 
 header {
  display: flex;
- padding: 1rem;
+ margin: 2rem 1rem 1rem 1rem;
  justify-content: space-between;
  align-items: center;
 }
 nav {
  background-color: hsl(257, 27%, 26%);
- border-radius: 5px;
+ border-radius: 8px;
  position: absolute;
  width: 90%;
- top: 4.5rem;
+ top: 5rem;
  left: 50%;
  visibility: hidden;
  opacity: 0;
@@ -63,6 +69,7 @@ nav {
 .nav-menu::before {
  font-size: 2rem;
  color: hsl(0, 0%, 75%);
+
  @media (min-width: 600px) {
   display: none;
  }
@@ -74,4 +81,58 @@ nav {
  display: block;
  visibility: visible;
  opacity: 1;
+}
+
+// HERO SECTION
+
+.hero {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ max-width: 100%;
+}
+.hero-image {
+ overflow: hidden;
+ img {
+  max-width: 500%;
+  width: 130%;
+  transform: translate(5%, 3%);
+ }
+}
+.hero-content {
+ height: 10%;
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ margin: 1rem;
+ h1 {
+  margin-bottom: 0;
+ }
+ button {
+  margin: 1rem 5rem;
+  border: none;
+  border-radius: 25px;
+  padding: 15px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: hsl(180, 66%, 49%);
+ }
+}
+
+// FOOTER SECTION
+
+footer {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+
+ ul {
+  margin: 0;
+  padding: 0;
+ }
 }
