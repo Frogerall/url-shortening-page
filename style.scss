@@ -30,6 +30,9 @@ header {
  margin: 2rem 1rem 1rem 1rem;
  justify-content: space-between;
  align-items: center;
+ @media (min-width: 1024px) {
+  margin: 2rem 3rem;
+ }
 }
 nav {
  background-color: hsl(257, 27%, 26%);
@@ -354,6 +357,7 @@ footer {
  @media (min-width: 1024px) {
   flex-direction: row;
   justify-content: space-around;
+  align-items: first baseline;
  }
 
  ul {
