@@ -1,6 +1,17 @@
+@media (min-width: 1024px) {
+  html {
+    overflow-x: hidden;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
   max-width: 1440px;
+}
+@media (min-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
 }
 
 p {
@@ -186,6 +197,15 @@ nav a {
   width: 130%;
   transform: translate(5%, 3%);
 }
+@media (min-width: 1024px) {
+  .hero-image {
+    overflow: visible;
+  }
+  .hero-image img {
+    width: 100%;
+    transform: translate(30%, 3%);
+  }
+}
 
 .hero-content {
   height: 10%;
@@ -242,6 +262,10 @@ nav a {
 }
 @media (min-width: 1024px) {
   .url-shrink {
+    background: url(../images/bg-shorten-desktop.svg) no-repeat;
+    background-color: hsl(257, 27%, 26%);
+    background-position: top right;
+    background-size: cover;
     flex-direction: row;
     padding: 3rem;
     margin: 3rem;
